@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contactStyle.css">
+</head>
+<body>
+        <header>
+            <h1>
+                Contact us 
+            </h1>
+        </header>
+        <main>
+            <!--The form is being handeled by formbold.com hence all the responces will appear there.-->
+            <form action="https://formbold.com/s/3NL1m" method="post" enctype="multipart/form-data">
+                <!--We use post method instead of get method as get method 
+                    displays all the form information in the url which is 
+                    not good.-->
+             <fieldset name="Personal Info"><!--Adds a container-->
+             <legend>Personal Info</legend><!--Gives a name to the contaimer-->
+             <p>
+                <label for="firstName" id="firstName">First Name:</label>
+             <input type="text" name="firstName" id="firstName" placeholder="Jon" required>
+             <!--The id attribute has to be same as for attribute of the label.
+            The name attribute coulb be anything. It will be used to label the 
+            input from the user on the server side.-->
+             </p>
+             <p>
+                <label for="lastName" id="lastName">Last Name:</label>
+             <input type="text" placeholder="Doe" name="lastName" id="lastName" required>
+             </p>
+             <p>
+                <label for="password" id="password" >Password:</label>
+                <input type="password" name="password" id="password">
+             </p>
+             <p>
+                <label for="phone" id="phone">Phone No.</label>
+                <input type="tel" placeholder="9876543212" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="phone" name="phone">
+             </p>
+             <p>
+                <label for="email" id="email">Email:</label>
+                <input type="email" placeholder="email@gmail.com" name="email" id="email">
+             </p>
+             <p>
+                <label for="favroiteDecade" id="favroiteDecade">Favroite Decade:</label>
+                <input type="number" placeholder="1950" step="10" min="1950" max="2030" name="favroiteDecade" id="favroiteDecade">  <!--We add a decade selector 
+                    . step 10 means diff of 10 . and has min and max values to select -->          
+            </p>
+             <p>
+                <label for="favroiteCoffee">Favroite Coffee:</label>
+                <select name="favroiteCoffee" id="favroiteCoffee">
+                    <optgroup label="Regular"><!--groupd similar options-->
+                        <option value="regularCoffee">Regular Coffee</option>
+                    <option value="Latte" selected>Latte</option><!--selected as default-->
+                    </optgroup>
+                    <optgroup label="Esspresso">
+                        <option value="americano">Americano</option>
+                    <option value="iceCoffee">Ice Coffee</option>
+                    </optgroup>
+                    <optgroup Label="others">
+                        <option value="others">Others</option>
+                    </optgroup>
+                </select>
+             </p>
+            </fieldset>
+            <br><!--To add a line break.-->
+            <fieldset name="FavroiteFood">
+             <legend>Favroite Food</legend>
+             <p>
+                <label for="Pizza">Pizza</label>
+                <input type="radio" name="favroiteFood" id="Pizza" >
+                <!--Here the name attribute has to be the same or else the user
+                would be able to select more than one option which is not done when
+                using radio select options.-->
+                <label for="Taco">Taco</label>
+                <input type="radio" name="favroiteFood" id="Taco">
+                <label for="Tortillia">Tortillia</label>
+                <input type="radio" name="favroiteFood" id="Tortillia">
+                <label for="other">Other</label>
+                <input type="radio" name="favroiteFood" id="other">
+             </p>
+            </fieldset>
+            <fieldset name="Pet">
+                <legend>Do you have a pet?</legend>
+                <p>
+                    <label for="Dog">Dog</label>
+                <input type="checkbox" name="pet" id="Dog">
+                </p>
+                <p>
+                    <label for="Cat">Cat</label>
+                <input type="checkbox" name="pet" id="Cat">
+                </p>
+                <p>
+                    <label for="Shark">Shark</label>
+                <input type="checkbox" name="pet" id="Shark">
+                </p>
+                <p>
+                    <label for="Others">Other</label>
+                <input type="checkbox" name="pet" id="Others">
+                </p>
+                
+            </fieldset>
+            <fieldset name="message">
+                <legend>Message for us</legend>
+                <textarea name="message" id="meassage" cols="30" rows="10" placeholder="Wite here..."></textarea>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            </form>
+        </main>
+        <footer>
+            <span>&copy;SidCo.</span>
+        </footer>
+</body>
+</html>
